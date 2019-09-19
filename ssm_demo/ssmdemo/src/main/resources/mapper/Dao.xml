@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.csfh.demo.dao.BankInfoDao">
+    <resultMap id="BaseResultMap" type="com.csfh.demo.entity.BankInfo">
+        <id column="BankInfo" jdbcType="VARCHAR" property="BankInfo"/>
+        <id column="PersonCount" jdbcType="INTEGER" property="PersonCount"/>
+        <id column="ChildBankCount" jdbcType="INTEGER" property="ChildBankCount"/>
+    </resultMap>
+
+    <select id="listAll" resultMap="BaseResultMap">
+        select * from CSFH_INFO;
+    </select>
+
+</mapper>
